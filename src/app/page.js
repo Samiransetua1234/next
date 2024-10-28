@@ -8,11 +8,19 @@ export default function Home() {
     // alert(item)
     setName(item);
   };
+
+  const InnerComp=()=>{
+    return(
+      <h1>It is inner Component</h1>
+    )
+  }
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Events , Function and State {name}</h1>
         <button onClick={() => fruit("Swastik")}>Click Me</button>
+        <InnerComp/>
+        {InnerComp()}
       </main>
     </div>
   );
